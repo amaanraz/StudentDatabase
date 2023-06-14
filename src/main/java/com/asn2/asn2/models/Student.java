@@ -10,7 +10,7 @@ public class Student {
     private int uid;
     
     private String name;
-    private int gpa;
+    private float gpa;
     private int weight;
     private int height;
     private String color;
@@ -19,7 +19,7 @@ public class Student {
     public Student() {
     }
 
-    public Student(String name, int gpa, int weight, int height, String color) {
+    public Student(String name, float gpa, int weight, int height, String color) {
         this.name = name;
         this.gpa = gpa;
         this.weight = weight;
@@ -68,11 +68,11 @@ public class Student {
         this.height = height;
     }
 
-    public int getGpa() {
+    public float getGpa() {
         return gpa;
     }
 
-    public void setGpa(int gpa) {
+    public void setGpa(float gpa) {
         this.gpa = gpa;
     }
 

@@ -56,7 +56,7 @@ public class StudentController {
          // Convert string inputs to integers
         int newWeight = Integer.parseInt(newWeightString);
         int newHeight = Integer.parseInt(newHeightString);
-        int newGpa = Integer.parseInt(newGpaString);
+        float newGpa = Float.parseFloat(newGpaString);
         studentRepo.save(new Student(newName,newGpa,newWeight,newHeight,color));
         response.setStatus(201);
         return "redirect:/students/view";
@@ -70,7 +70,7 @@ public class StudentController {
         String newName = newuser.get("name");
         int newWeight = Integer.parseInt(newuser.get("weight"));
         int newHeight = Integer.parseInt(newuser.get("height"));
-        int newGpa = Integer.parseInt(newuser.get("gpa"));
+        float newGpa = Float.parseFloat(newuser.get("gpa"));
         String color = newuser.get("color");
 
         current.setName(newName);
