@@ -10,7 +10,7 @@ public class Student {
     private int uid;
     
     private String name;
-    private int age;
+    private int gpa;
     private int weight;
     private int height;
     private String color;
@@ -19,21 +19,14 @@ public class Student {
     public Student() {
     }
 
-    // Constructer
-    public Student(String name, int age, int weight, int height) {
+    public Student(String name, int gpa, int weight, int height, String color) {
         this.name = name;
-        this.age = age;
-        this.weight = weight;
-        this.height = height;
-    }
-
-    public Student(String name, int age, int weight, int height, String color) {
-        this.name = name;
-        this.age = age;
+        this.gpa = gpa;
         this.weight = weight;
         this.height = height;
         this.color = color;
     }
+
 
     public String getColor() {
         return color;
@@ -41,14 +34,6 @@ public class Student {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public Student(int uid, String name, int age, int weight, int height) {
-        this.uid = uid;
-        this.name = name;
-        this.age = age;
-        this.weight = weight;
-        this.height = height;
     }
 
     public String getName() {
@@ -67,14 +52,6 @@ public class Student {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public int getWeight() {
         return weight;
     }
@@ -89,6 +66,14 @@ public class Student {
 
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    public int getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(int gpa) {
+        this.gpa = gpa;
     }
 
     

@@ -43,11 +43,11 @@ public class StudentController {
         String newName = newuser.get("name");
         String newWeightString = newuser.get("weight");
         String newHeightString = newuser.get("height");
-        String newAgeString = newuser.get("age");
+        String newGpaString = newuser.get("gpa");
         String color = newuser.get("color");
 
         // Perform validation
-        if (newName.isEmpty() || newWeightString.isEmpty() || newHeightString.isEmpty() || newAgeString.isEmpty()) {
+        if (newName.isEmpty() || newWeightString.isEmpty() || newHeightString.isEmpty() || newGpaString.isEmpty()) {
             // Handle validation errors
             // You can redirect to the form page with error messages or display them in the same view
             return "students/error";
@@ -56,8 +56,8 @@ public class StudentController {
          // Convert string inputs to integers
         int newWeight = Integer.parseInt(newWeightString);
         int newHeight = Integer.parseInt(newHeightString);
-        int newAge = Integer.parseInt(newAgeString);
-        studentRepo.save(new Student(newName,newAge,newWeight,newHeight,color));
+        int newGpa = Integer.parseInt(newGpaString);
+        studentRepo.save(new Student(newName,newGpa,newWeight,newHeight,color));
         response.setStatus(201);
         return "redirect:/students/view";
     }
@@ -70,11 +70,11 @@ public class StudentController {
         String newName = newuser.get("name");
         int newWeight = Integer.parseInt(newuser.get("weight"));
         int newHeight = Integer.parseInt(newuser.get("height"));
-        int newAge = Integer.parseInt(newuser.get("age"));
+        int newGpa = Integer.parseInt(newuser.get("gpa"));
         String color = newuser.get("color");
 
         current.setName(newName);
-        current.setAge(newAge);
+        current.setGpa(newGpa);
         current.setHeight(newHeight);
         current.setWeight(newWeight);
         current.setColor(color);
